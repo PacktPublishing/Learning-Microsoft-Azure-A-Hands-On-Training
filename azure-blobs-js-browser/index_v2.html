@@ -1,0 +1,123 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+<title></title>
+
+<style>
+.button {
+  background-color: #656927; /* Green */
+  border: none;
+  color: white;
+  padding: 9px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+table {
+    font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+	background-color: #D4DCD8;
+}
+
+table td, table th {
+    border: 1px solid #ddd;
+    padding: 6px;
+}
+
+#envt_details tr:nth-child(even){background-color: #f2f2f2;}
+
+table tr:hover {background-color: yellow;}
+
+table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #454545;
+    color: white;
+}
+
+
+</style>
+
+
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Kavyashree Shah</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">38994000.0000000</mso:Order>
+<mso:ComplianceAssetId msdt:dt="string"></mso:ComplianceAssetId>
+<mso:SharedWithUsers msdt:dt="string"></mso:SharedWithUsers>
+<mso:_ExtendedDescription msdt:dt="string"></mso:_ExtendedDescription>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Kavyashree Shah</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x0101002433A22E08CBFB49B0E65B7E0B5148FD</mso:ContentTypeId>
+<mso:_SourceUrl msdt:dt="string"></mso:_SourceUrl>
+<mso:_SharedFileIndex msdt:dt="string"></mso:_SharedFileIndex>
+<mso:MediaLengthInSeconds msdt:dt="string"></mso:MediaLengthInSeconds>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+
+
+<body bgcolor = '#BA7A84'>
+	<center>
+		<img src='azure.png' width="100" height="60">
+	
+	<h2><font style='color:#037; font-family: Calibri, sans-serif;'>A Simple Web Interface to demonstrate how modern web applications can communicate with blob storage</font></h2>
+
+
+
+	<div style="height:20%; width:90%; background:#393E4E; font-size:18px; font-family: Calibri, sans-serif;">
+	<br>
+		<button id="create-container-button" class="button">Create container</button>
+		<button id="delete-container-button" class="button">Delete container</button>
+		<button id="select-button" class="button" >Select and upload files</button>
+		<input type="file" id="file-input" multiple style="display: none;"  class="button" />
+		<button id="list-button"  class="button">List files</button>
+		<button id="delete-button" class="button">Delete selected files</button>
+		<button id="download-button" class="button">Populate Download Links</button>
+	<br>   
+	<br>   
+	<br>   
+	
+	   <p><b>Status:</b></p>
+		<p id="status" style="height:180px; width: 100%; overflow: scroll; background-color:#008D83; " />
+	
+		
+		
+		
+	
+		<div id='div_download_links_table'>
+			<p><b>Blob Download Links:</b></p>
+			<center> 
+			<table id="download-table" >
+				<th><td>Blob Name</td> <td> Download Link </td> </th>
+			</table>
+			</center>
+		</div>
+		
+		
+		<div id='div_container_file_list'>
+			<p><b>List of files available inside Blob Container:</b></p>
+		   <center> 
+		   <select id="file-list" multiple style="height:150px; width: 100%; overflow: scroll; background-color:#8D5100;" />
+			</center>
+		</div>
+		
+	</div>
+	</center>
+	
+
+</body>
+
+<script src="./index.js"></script>
+</html>
